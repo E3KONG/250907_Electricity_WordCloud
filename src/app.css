@@ -114,15 +114,44 @@ th, td {
   border-radius: 5px;
   padding: 10px;
   text-align: center;
-}
-th {
+
   font-weight: 700;
   color: #333;
   font-size: var(--fs-m);
+  @media (max-width: 768px) {
+    font-weight: 600;
+    color: #333;
+    font-size: var(--fs-s);
+    line-height: 0.5;
+  }
 }
-td p {
+th p, td p {
   font-weight: 500;
   color: #888;
-  margin-top: 0px;
+  margin-top: 0;
   font-size: var(--fs-s);
+  @media (max-width: 768px) {
+    font-size: var(--fs-xs);
+    margin-top: 8px;
+  }
+}
+.groupTopic {
+  width: 1rem;
+  color: #f1f1f1;
+  font-weight: 450;
+  line-height: 1.2;
+}
+
+
+.desktop-only {
+  display: block;
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+.mobile-only {
+  display: none;
+  @media (max-width: 768px) {
+    display: block;
+  }
 }
